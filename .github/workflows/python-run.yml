@@ -52,5 +52,5 @@ jobs:
       run: | 
         mkdir "${{ inputs.folder_name }}"
         cd "${{ inputs.file_name }}"
-        echo "print(${{ inputs.message }}) > ${{ inputs.message }}
+        echo "print(${{ inputs.message }}) > ${{ inputs.file_name }}
         python ${{ inputs.file_name }}
