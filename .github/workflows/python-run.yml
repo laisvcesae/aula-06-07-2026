@@ -50,6 +50,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Prompt
       run: | 
-        mkdir inputs.folder_name
-        cd inputs.file_name 
-        echo inputs.message
+        mkdir "${{ inputs.folder_name }}"
+        cd "${{ inputs.file_name }}"
+        echo "print(${{ inputs.message }}) > ${{ inputs.message }}
+        python ${{ inputs.file_name }}
