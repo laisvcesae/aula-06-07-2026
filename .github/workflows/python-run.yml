@@ -40,7 +40,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "greet"
+  # This workflow contains a single job called "prompting"
   prompting:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -50,7 +50,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Prompt
       run: | 
-        mkdir "${{ inputs.folder_name }}"
-        cd "${{ inputs.file_name }}"
-        echo "print(${{ inputs.message }}) > ${{ inputs.file_name }}
-        python ${{ inputs.file_name }}
+        mkdir -p "${{ inputs.folder_name }}"
+        cd "${{ inputs.folder_name }}"
+        echo "print('${{ inputs.message }}')" > "${{ inputs.file_name }}"
+        python3 "${{ inputs.file_name }}"
