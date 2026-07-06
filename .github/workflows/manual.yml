@@ -39,4 +39,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Create folder
-      run: mkdir ${{ inputs.name }}-${{ inputs.workspace }}"
+      run: mkdir "${{ inputs.name }}-${{ inputs.workspace }}"
