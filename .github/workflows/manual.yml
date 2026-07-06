@@ -40,3 +40,6 @@ jobs:
     # Runs a single command using the runners shell
     - name: Create folder
       run: mkdir "${{ inputs.name }}-${{ inputs.workspace }}"
+
+    - name: Check Python Version
+      run: python --version
