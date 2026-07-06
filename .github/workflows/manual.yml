@@ -42,4 +42,8 @@ jobs:
       run: mkdir "${{ inputs.name }}-${{ inputs.workspace }}"
 
     - name: Check Python Version
-      run: python --version
+      run: |
+        python --version
+        ls -all
+        echo "print("Hello! :D")" > hello.py
+        python hello.py
